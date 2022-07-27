@@ -14,11 +14,11 @@ export default class GetRecentDistance extends Component {
       { 
         headers: 
         {
-        refreshToken: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVNjU1NDNlNWIzNGMxYTg5ZmIwMDc4YzUxOTNhZTY2MjEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY1ODgwNDczNzA2NX0.YMjg7E6PAi622X9u031XPwGPh7Vohvq_M3kFH5NWg4w', //eslint-disable-line
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVNjU1NDNlNWIzNGMxYTg5ZmIwMDc4YzUxOTNhZTY2MjEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY1ODgwNDczNzA2NSwiZXhwIjoxNjU4ODA0NzM3NjY1fQ.E11rWAIFJG1heA2sZHWJW9Fzx3ztbMrT3zXS09B_duw' //eslint-disable-line
+        refreshToken: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVNjU1NDNlNWIzNGMxYTg5ZmIwMDc4YzUxOTNhZTY2MjEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY1ODg5MjUyODQ3NH0.uXWdCPcDjfyJ5_KkgLh9VIbhPvHlkktkHygCr8av1XA', //eslint-disable-line
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJVNjU1NDNlNWIzNGMxYTg5ZmIwMDc4YzUxOTNhZTY2MjEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY1ODg5MjUyODQ3NCwiZXhwIjoxNjU4ODkyNTI5MDc0fQ.ytx0xemtcppK0dsuqoQ6HetOiCFiVGPAtjr21dtf-_g' //eslint-disable-line
       }}).then((response) => { //eslint-disable-line
       this.setState({
-        distance: console.log(response),
+        distance: response.data.result[0].totalDistance,
       });
     });
   };

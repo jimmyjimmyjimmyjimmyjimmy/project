@@ -13,46 +13,10 @@ import OccupancyTooltipContent from './OccupancyTooltipContent';
 
 const data = [
   {
-    name: 'Mon 10/07',
+    name: '27/07',
     uv: 95,
     departure: 75,
     arrival: 10,
-  },
-  {
-    name: 'Tue 11/07',
-    uv: 85,
-    departure: 23,
-    arrival: 65,
-  },
-  {
-    name: 'Wed 12/07',
-    uv: 47,
-    departure: 26,
-    arrival: 45,
-  },
-  {
-    name: 'Thu 13/07',
-    uv: 80,
-    departure: 25,
-    arrival: 45,
-  },
-  {
-    name: 'Fri 14/07',
-    uv: 55,
-    departure: 35,
-    arrival: 15,
-  },
-  {
-    name: 'Sat 15/07',
-    uv: 99,
-    departure: 30,
-    arrival: 40,
-  },
-  {
-    name: 'Sun 16/07',
-    uv: 85,
-    departure: 48,
-    arrival: 26,
   },
 ];
 
@@ -60,86 +24,30 @@ const data01 = [
   {
     id: 0,
     color: 'blue',
-    head: 'Arrivals',
+    head: 'Pace',
     data: [{
-      id: 0, value: 24,
-    }, {
-      id: 1, value: 74,
-    }, {
-      id: 2, value: 54,
-    }, {
-      id: 3, value: 57,
-    }, {
-      id: 4, value: 32,
-    }, {
-      id: 5, value: 68,
-    }, {
-      id: 6, value: 53,
+      id: 0, value: 1.38,
     }],
   },
   {
     id: 1,
     color: 'green',
-    head: 'Departures',
+    head: 'Distance',
     data: [{
-      id: 0, value: 75,
-    }, {
-      id: 1, value: 65,
-    }, {
-      id: 2, value: 46,
-    }, {
-      id: 3, value: 35,
-    }, {
-      id: 4, value: 65,
-    }, {
-      id: 5, value: 21,
-    }, {
-      id: 6, value: 34,
+      id: 0, value: 2.05,
     }],
   },
   {
     id: 2,
-    color: 'gray',
-    head: 'Stay overs',
+    color: 'red',
+    head: 'Time',
     data: [{
-      id: 0, value: 3113,
-    }, {
-      id: 1, value: 2424,
-    }, {
-      id: 2, value: 4545,
-    }, {
-      id: 3, value: 4543,
-    }, {
-      id: 4, value: 3432,
-    }, {
-      id: 5, value: 3211,
-    }, {
-      id: 6, value: 2112,
-    }],
-  },
-  {
-    id: 3,
-    color: 'gray',
-    head: 'Customers',
-    data: [{
-      id: 0, value: 131,
-    }, {
-      id: 1, value: 133,
-    }, {
-      id: 2, value: 343,
-    }, {
-      id: 3, value: 342,
-    }, {
-      id: 4, value: 351,
-    }, {
-      id: 5, value: 234,
-    }, {
-      id: 6, value: 242,
+      id: 0, value: 2,
     }],
   },
 ];
 
-const toPercent = (decimal, fixed = 0) => `${decimal.toFixed(fixed)}%`;
+const toPercent = (decimal, fixed = 0) => `${decimal.toFixed(fixed)}`;
 
 const Occupancy = ({ dir, themeName }) => {
   const { t } = useTranslation('common');
